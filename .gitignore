@@ -1,13 +1,14 @@
+
 # build artifacts
-target/
-node_modules/
-dist/
-
-# program binaries
-*.so
-
 # keys and secrets — NEVER commit
+# program binaries
+*.demo-proofs.json
 *.json.keypair
-keys/
-.env
+*.so
+.demo-proofs.json
 .dev-wallet.json
+.env
+dist/
+keys/
+node_modules/
+target/

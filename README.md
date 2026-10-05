@@ -41,10 +41,14 @@ campaign, reads a `proofs.json` (from `build_tree`), and submits `claim`. web3.j
 vendored at `app/vendor/web3.js` so the page works without a bundler or CDN.
 
 ## Deployment
-Program ID: `2NepmY26ip3y5gPWaY5ZoAUUWNtqqMjDobiAyFtCj5Jf` (regenerate keypair for mainnet).
+**Program is live on Solana devnet**: `2NepmY26ip3y5gPWaY5ZoAUUWNtqqMjDobiAyFtCj5Jf`
+(IDL on-chain; [explorer](https://explorer.solana.com/address/2NepmY26ip3y5gPWaY5ZoAUUWNtqqMjDobiAyFtCj5Jf?cluster=devnet)).
+Claim portal live at https://khiwniti.github.io/airdrop-claim/ (default RPC: devnet).
+Judge/demo campaign (view state; allocation is the demo wallet's): `GwyoYCDCUusLByLBjHpe1c9ABVZWV3GW6MTpUnkbtnEK`.
+Devnet lifecycle signatures: init `qRmsp54W…`, claim `5LFaGeWU…`, close `4FJPkbUD…`,
+portal-claim `3qhWKrzB…` (all finalized on devnet).
 
-End-to-end lifecycle driver (`examples/e2e_devnet.rs`): mint → fund → initialize →
-claim → close, asserting every balance transition on-chain:
+End-to-end lifecycle driver (`examples/e2e_devnet.rs`), defaults to public devnet;
 
 ```bash
 solana-test-validator --reset --quiet                       # local, unlimited faucet

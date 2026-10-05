@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>airdrop-claim — claim portal</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+    label { display: block; margin: 0.8rem 0 0.2rem; font-weight: 600; }
+    input, button { width: 100%; padding: 0.5rem; box-sizing: border-box; }
+    button { margin-top: 0.8rem; cursor: pointer; }
+    pre#log { background: #111; color: #0f0; padding: 0.8rem; white-space: pre-wrap; min-height: 6rem; }
+    #campaignInfo { margin: 0.8rem 0; font-family: monospace; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>airdrop-claim</h1>
+  <label>RPC endpoint</label>
+  <input id="rpc" value="https://api.devnet.solana.com" />
+  <label>Campaign address</label>
+  <input id="campaign" placeholder="campaign PDA pubkey" />
+  <label>proofs.json (from build_tree)</label>
+  <input id="proofFile" type="file" accept=".json" />
+  <button id="connect">1. Connect wallet</button>
+  <button id="load">2. Load campaign</button>
+  <button id="claim" disabled>3. Claim</button>
+  <div id="campaignInfo"></div>
+  <pre id="log"></pre>
+  <script src="./vendor/web3.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
